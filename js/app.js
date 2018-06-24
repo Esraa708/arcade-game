@@ -74,7 +74,7 @@ class Player {
             const close = document.querySelector('.close');
             this.x = 200;
             this.y = 300;
-            //resseting spped to zero
+            //reseting speed to zero
             allEnemies.forEach(function (element) {
                 element.speed = 0;
             });
@@ -93,12 +93,6 @@ class Player {
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-        if (this.winning == true) {
-            ctx.font = "30px Arial";
-            ctx.fillStyle = "red";
-            ctx.textAlign = "center";
-            ctx.fillText("Congrats you won ", 300, 300);
-        }
 
     }
     handleInput(key) {
